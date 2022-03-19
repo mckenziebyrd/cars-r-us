@@ -1,6 +1,3 @@
-import { interiors } from "./interiors";
-import { technologies } from "./Technologies";
-import { wheels } from "./wheels";
 
 const database = {
   paints: [
