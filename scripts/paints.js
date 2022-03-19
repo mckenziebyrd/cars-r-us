@@ -5,8 +5,8 @@ const paints = getPaints();
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "paint") {
-            window.alert(`User chose ${event.target.value} paint`)
+        if (event.target.id === "paint") {
+            window.alert(`User chose option ${event.target.value}`)
         }
     }
 )
@@ -18,7 +18,7 @@ export const Paint = () => {
   html += '<option value="0">Choose Paint Color<option>';
 
   const arrayOfPaints = paints.map((paint) => {
-    return `<option value="${paints.id}">${paint.color}</option>`;
+    return `<option value="${paint.id}">${paint.color}</option>`;
   });
 
   html += arrayOfPaints.join("");

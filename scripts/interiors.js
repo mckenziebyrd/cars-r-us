@@ -2,6 +2,16 @@ import { getInteriors } from "./database.js";
 
 const interiors = getInteriors();
 
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.id === "interiors") {
+            window.alert(`User chose option ${event.target.value}`)
+        }
+    }
+)
+
+
 export const Interiors = () => {
   let html = "<h2>Interiors</h2>";
 
@@ -9,7 +19,7 @@ export const Interiors = () => {
   html += '<option value="0">Select an Interior</option>';
 
   const arrayOfInteriors = interiors.map((interiors) => {
-    return `<option value="${interiors.id}">${interiors.name}</option>`;
+    return `<option value="${interiors.id}">${interiors.fabric}</option>`;
   });
 
   html += arrayOfInteriors.join("");
