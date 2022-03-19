@@ -1,5 +1,9 @@
+import { interiors } from "./interiors";
+import { technologies } from "./Technologies";
+import { wheels } from "./wheels";
+
 const database = {
-  paintColor: [
+  paints: [
     {
       id: 1,
       color: "Silver",
@@ -21,7 +25,7 @@ const database = {
       price: 269,
     },
   ],
-  interior: [
+  interiors: [
       {
           id: 1,
           fabric: "Beige Fabric",
@@ -43,7 +47,7 @@ const database = {
         price: 1000
       }
   ],
-  technology: [
+  technologies: [
       {
           id: 1,
           technology: "Basic Package - basic sound system",
@@ -88,3 +92,19 @@ const database = {
       }
   ],
 };
+
+export const getPaints = () => {
+    return database.paints.map(paint => ({...paint}))
+}
+
+export const getInteriors = () => {
+    return database.interiors.map(interiors => ({...interiors}))
+}
+
+export const getTechnologies = () => {
+    return database.technologies.map(technologies => ({...technologies}))
+}
+
+export const getWheels = () => {
+    return database.wheels.map(wheels => ({...wheels}))
+}
