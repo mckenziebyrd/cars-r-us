@@ -1,9 +1,64 @@
+* {
+    font-family: 'Raleway', sans-serif; 
+    /* background-color: rgb(230, 208, 180); */
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: rgb(230, 208, 180);
+
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.choices {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px ;
+}
+
 .options {
-    flex-basis: 24%;
-    margin: 0 2rem;
-    border: 1px dashed rgb(187, 0, 0);
+    flex-basis: 40%;
+    margin: 2rem;
+    border: 2px double rgb(180, 83, 18);
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(165, 117, 117);
+    width: 25rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
 }
 
+#orderButton {
+    padding: 9px 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 0.5rem;
+    background-color: rgb(180, 83, 18) ;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0px 4px rgb(187, 185, 185);
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
+#orderButton:active {
+    box-shadow: 0px 1px #666;
+    transform: translateY(4px);
+  }
+
+#tech, #interiors, #paint, #wheels{
+    background-color: rgb(255, 239, 220);
+    font-size: 15px;
+}
+
+#ordersHeader {
+    text-decoration: underline;
+    font-size: 30px;
+
+}
