@@ -1,13 +1,12 @@
-import { getTechnologies } from "./database.js";
+import { getTechnology, setTechnology } from "./database.js";
 
-const techs = getTechnologies();
+const techs = getTechnology();
 
 document.addEventListener(
     "change",
     (event) => {
         if (event.target.id === "tech") {
-            window.alert(`User chose option ${event.target.value}`)
-        }
+            setTechnology(parseInt(event.target.value))        }
     }
 )
 
