@@ -1,6 +1,6 @@
 import { getTechnology, setTechnology } from "./database.js";
 
-const techs = getTechnology();
+const tech = getTechnology();
 
 document.addEventListener(
     "change",
@@ -16,7 +16,7 @@ export const Technologies = () => {
   html += '<select id="tech">';
   html += '<option value="0">Select a technology package</option>';
 
-  const arrayOfOptions = techs.map((tech) => {
+  const arrayOfOptions = tech.map((tech) => {
     return `<option value="${tech.id}">${tech.technology}</option>`;
   });
 

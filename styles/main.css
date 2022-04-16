@@ -2,7 +2,7 @@
     font-family: 'Raleway', sans-serif; 
     /* background-color: rgb(230, 208, 180); */
     box-sizing: border-box;
-
+    margin: 10px;
 }
 
 body {
@@ -12,6 +12,10 @@ body {
 
 h1 {
     font-size: 45px;
+}
+
+#container {
+    margin: 5px;
 }
 
 .choices {

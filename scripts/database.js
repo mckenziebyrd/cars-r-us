@@ -1,6 +1,6 @@
 
 const database = {
-    orderBuilder: {},
+    orderBuilder: {}, //this is temporary state
     paints: [
     {
       id: 1,
@@ -45,14 +45,14 @@ const database = {
         price: 1000
       }
   ],
-  technologies: [
+  tech: [
       {
           id: 1,
           technology: "Basic Package",
           price: 3000
       },
       {
-        id: 1,
+        id: 2,
         technology: "Navigation Package",
         price: 3700
       },
@@ -89,12 +89,12 @@ const database = {
         price: 670
       }
   ],
-  customOrders: [
+  customOrders: [ //this is permanemt state
     {
         id: 1,
         paintId: 3,
-        technologyId: 2,
-        wheelId: 3,
+        techId: 2,
+        wheelsId: 3,
         interiorId: 4,
         timestamp: 1614659931693
     }
@@ -110,32 +110,32 @@ export const getInteriors = () => {
 }
 
 export const getTechnology = () => {
-    return database.technologies.map(technologies => ({...technologies}))
+    return database.tech.map(tech => ({...tech}))
 }
 
 export const getWheels = () => {
     return database.wheels.map(wheels => ({...wheels}))
 }
 
+export const getOrders = () => {
+  return database.customOrders.map(order => ({...order}))
+}
 export const setPaint = (id) => {
     database.orderBuilder.paintId = id
 }
 
 export const setInterior = (id) => {
-    database.orderBuilder.interiorsId = id
+    database.orderBuilder.interiorId = id
 }
 
 export const setTechnology = (id) => {
-    database.orderBuilder.technologiesId = id
+    database.orderBuilder.techId = id
 }
 
 export const setWheel = (id) => {
     database.orderBuilder.wheelsId = id
 }
 
-export const getOrders = () => {
-  return database.customOrders.map(order => ({...order}))
-}
 
 export const addCustomOrder = () => {
   // Copy the current state of user choices

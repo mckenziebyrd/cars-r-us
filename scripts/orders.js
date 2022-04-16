@@ -6,8 +6,11 @@ const buildOrderListItem = (order) => {
     const tech = getTechnology()
     const wheels = getWheels()
     
+    
     let totalCost = 0
 
+
+    //The find() method returns the first element in the provided array that satisfies the provided testing function.
     const foundInteriors = interiors.find(
     (interior) => {
         return interior.id === order.interiorId
@@ -22,16 +25,17 @@ const foundPaints = paints.find(
 )
 totalCost += foundPaints.price
 
-// const foundTech = tech.find(
-//     (techs) => {
-//         return techs.id === order.technologyId
-//     }
-// )
-// totalCost += foundTech.price
+// something about this is breaking it. 
+const foundTech = tech.find(
+    (techs) => {
+        return techs.id === order.techId
+    }
+)
+totalCost += foundTech.price
 
 const foundWheels = wheels.find(
     (wheel) => {
-        return wheel.id === order.wheelId
+        return wheel.id === order.wheelsId
     }
 )
 totalCost += foundWheels.price
